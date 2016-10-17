@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3E3E40",
+    "navigationBarTitleText": "猫先生",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐"
+      },
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯"
+      }
+    ]
+  }
+}
