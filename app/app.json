@@ -1,31 +1,47 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/news/news"
+    "pages/home/index/index",
+    "pages/life/life/life",
+    "pages/news/news/news",
+    "pages/music/music/music",
+    
+    "pages/home/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#3E3E40",
-    "navigationBarTitleText": "猫先生",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "HiColdCat",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/home/index/index",
+        "text": "首页",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/home_hl.png"
       },
       {
-        "pagePath": "pages/music/music",
-        "text": "音乐"
+        "pagePath": "pages/music/music/music",
+        "text": "音乐",
+        "iconPath":"images/music.png",
+        "selectedIconPath":"images/music_hl.png"
       },
       {
-        "pagePath": "pages/life/life",
-        "text": "生活"
+        "pagePath": "pages/news/news/news",
+        "text": "资讯",
+        "iconPath":"images/news.png",
+        "selectedIconPath":"images/news_hl.png"
       },
       {
-        "pagePath": "pages/news/news",
-        "text": "资讯"
+        "pagePath": "pages/life/life/life",
+        "text": "生活",
+        "iconPath":"images/life.png",
+        "selectedIconPath":"images/life_hl.png"
       }
     ]
   }

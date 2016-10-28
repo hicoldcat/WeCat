@@ -1,0 +1,47 @@
+.swiper{
+    width: 100%;
+}
+.swiper image{
+    width:750rpx; 
+    height:375rpx;
+}
+.storieslist{
+    margin: 40rpx 20rpx 40rpx 20rpx;
+}
+
+.list_item{
+    margin-top:20rpx;
+}
+.list_item text{
+    font-size: 30rpx
+}
+
+.listimg{
+    float: left;
+    margin: 10rpx;
+    display: block;
+    width: 20%
+}
+.listimg image{
+    width:150rpx;
+    height: 150rpx
+}
+.listtext{
+   margin-top: 30rpx;
+   margin-left: 30rpx;
+   display: block;
+   float: left;
+   width: 70%;
+   font-size: 28rpx;
+   font-weight: bold;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}

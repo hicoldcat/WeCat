@@ -1,0 +1,24 @@
+<view class="swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{topstories}}">
+      <swiper-item>
+      <navigator url="../detail/detail?id={{item.id}}">
+        <image src="{{item.image}}" class="slide-image" />
+      </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="storieslist">
+  <view wx:for="{{storieslist}}">
+    <navigator url="../detail/detail?id={{item.id}}">
+        <view class="list_item clearfix">
+          <view wx:for="{{item.images}}"  wx:for-item="imglist" class="listimg">
+             <image src="{{imglist}}"></image>
+          </view>
+          <view class="listtext">{{item.title}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

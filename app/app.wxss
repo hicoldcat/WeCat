@@ -8,3 +8,8 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+image{
+  width:0rpx;
+  height:0rpx;
+}
