@@ -1,12 +1,12 @@
 <view class="swiper">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{topstories}}">
+    <view wx:for="{{topstories}}">
       <swiper-item>
       <navigator url="../detail/detail?id={{item.id}}">
         <image src="{{item.image}}" class="slide-image" />
       </navigator>
       </swiper-item>
-    </block>
+    </view>
   </swiper>
 </view>
 

@@ -16,7 +16,6 @@ Page({
         'Content-Type': 'application/json'
       },
       success (res) {
-        console.log(res);
         that.setData({
           storieslist:res.data.stories,
           topstories:res.data.top_stories
