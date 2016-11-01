@@ -11,7 +11,7 @@
 </view>
 
 <view class="storieslist">
-  <view wx:for="{{storieslist}}">
+  <view wx:for="{{storieslist}}" class="imgbox">
     <navigator url="../detail/detail?id={{item.id}}">
         <view class="list_item clearfix">
           <view wx:for="{{item.images}}"  wx:for-item="imglist" class="listimg">

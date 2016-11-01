@@ -9,6 +9,10 @@
     margin: 40rpx 20rpx 40rpx 20rpx;
 }
 
+.imgbox{
+    box-shadow:10rpx 10rpx 5rpx #BEBABA;
+}
+
 .list_item{
     margin-top:20rpx;
 }
@@ -20,7 +24,11 @@
     float: left;
     margin: 10rpx;
     display: block;
-    width: 20%
+    width: 20%;
+    background-image:url('../../../images/noimg.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:150rpx 130rpx;
 }
 .listimg image{
     width:150rpx;

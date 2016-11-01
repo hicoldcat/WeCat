@@ -16,12 +16,13 @@ Page({
         'Content-Type': 'application/json'
       },
       success (res) {
+        console.info(res);
         that.setData({
           storieslist:res.data.stories,
           topstories:res.data.top_stories
-        });
+        })
       }
     })
-  },
+  }
   
 })
