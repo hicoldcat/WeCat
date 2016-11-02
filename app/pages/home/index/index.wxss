@@ -11,6 +11,7 @@
 
 .imgbox{
     box-shadow:10rpx 10rpx 5rpx #BEBABA;
+    border-radius: 20rpx;
 }
 
 .list_item{
