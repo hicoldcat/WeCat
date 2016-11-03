@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/home/index/index",
-    "pages/life/life/life",
+    "pages/tools/tools/tools",
     "pages/news/news/news",
-    "pages/music/music/music",
+    "pages/work/work/work",
     
     "pages/home/detail/detail"
   ],
@@ -26,22 +26,22 @@
         "selectedIconPath":"images/home_hl.png"
       },
       {
-        "pagePath": "pages/music/music/music",
-        "text": "音乐",
-        "iconPath":"images/music.png",
-        "selectedIconPath":"images/music_hl.png"
-      },
-      {
         "pagePath": "pages/news/news/news",
         "text": "资讯",
         "iconPath":"images/news.png",
         "selectedIconPath":"images/news_hl.png"
       },
       {
-        "pagePath": "pages/life/life/life",
-        "text": "生活",
-        "iconPath":"images/life.png",
-        "selectedIconPath":"images/life_hl.png"
+        "pagePath": "pages/tools/tools/tools",
+        "text": "工具",
+        "iconPath":"images/tools.png",
+        "selectedIconPath":"images/tools_hl.png"
+      },
+      {
+        "pagePath": "pages/work/work/work",
+        "text": "猫窝",
+        "iconPath":"images/work.png",
+        "selectedIconPath":"images/work_hl.png"
       }
     ]
   }
