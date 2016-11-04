@@ -16,6 +16,9 @@
 
 .list_item{
     margin-top:20rpx;
+    position: relative;
+    border: 4rpx solid #1296db;
+     border-radius: 20rpx;
 }
 .list_item text{
     font-size: 30rpx
@@ -35,16 +38,35 @@
     width:150rpx;
     height: 150rpx
 }
-.listtext{
+.listtitle{
    margin-top: 30rpx;
    margin-left: 30rpx;
-   display: block;
    float: left;
    width: 70%;
    font-size: 28rpx;
    font-weight: bold;
 }
 
+.textcontainer{
+    float: right;
+    position: absolute;
+    right: 40rpx;
+    bottom: 10rpx;
+}
+
+.textfrom{
+    display: inline-block;
+    font-size: 20rpx;
+}
+
+.textsource{
+    display: inline-block;
+    font-size: 22rpx;
+    border: 4rpx solid red;
+    border-radius: 10rpx;
+    padding: 5rpx;
+    color: red;
+}
 .clearfix:after {
   content: "";
   display: block;

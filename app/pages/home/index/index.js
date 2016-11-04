@@ -5,24 +5,40 @@ Page({
     autoplay: true,        //是否自动播放
     interval: 3000,         //自动切换时间间隔
     duration: 1000,         //滑动动画时长
-    storieslist:[]         //首页故事列表
+    storieslist: [],        //首页故事列表
+    currentPage: 1,         //当前页
+    totalNumbers: 20        //首页新闻条数
   },
 
-  onLoad:function(){
+  onLoad: function () {
     var that = this;
-     wx.request({
-      url: 'http://news-at.zhihu.com/api/4/news/latest',
+    wx.request({
+      url: 'http://v.juhe.cn/weixin/query',
+      data: {
+        pno: that.data.currentPage,
+        ps: that.data.totalNumbers,
+        dtype: 'json',
+        key: '13127accc1a6b43e0e1be9cef3dcb870'
+      },
       headers: {
         'Content-Type': 'application/json'
       },
-      success (res) {
+      method: "GET",
+      success(res) {
         console.info(res);
-        that.setData({
-          storieslist:res.data.stories,
-          topstories:res.data.top_stories
-        })
+        let resArr = res.data.result.list;
+        if (resArr.length > 5) {
+          that.setData({
+            topstories: resArr.slice(0, 5),
+            storieslist: resArr.slice(5)
+          });
+        } else {
+          that.setData({
+            topstories: resArr
+          });
+        }
       }
     })
   }
-  
+
 })

@@ -2,8 +2,8 @@
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <view wx:for="{{topstories}}">
       <swiper-item>
-      <navigator url="../detail/detail?id={{item.id}}">
-        <image src="{{item.image}}" class="slide-image" />
+      <navigator url="../detail/detail?id={{item.id}}&pageurl={{item.url}}">
+        <image src="{{item.firstImg}}" class="slide-image" />
       </navigator>
       </swiper-item>
     </view>
@@ -12,12 +12,16 @@
 
 <view class="storieslist">
   <view wx:for="{{storieslist}}" class="imgbox">
-    <navigator url="../detail/detail?id={{item.id}}">
+    <navigator url="../detail/detail?id={{item.id}}&pageurl={{item.url}}">
         <view class="list_item clearfix">
-          <view wx:for="{{item.images}}"  wx:for-item="imglist" class="listimg">
-             <image src="{{imglist}}"></image>
+          <view class="listimg">
+             <image src="{{item.firstImg}}"></image>
           </view>
-          <view class="listtext">{{item.title}}</view>
+          <view class="listtitle">{{item.title}}</view>
+          <view class="textcontainer">
+            <view class="textfrom">来源：</view>
+            <view class="textsource">{{item.source}}</view>
+          </view>
       </view>
     </navigator>
   </view>
