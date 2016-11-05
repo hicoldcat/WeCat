@@ -12,6 +12,7 @@
 .imgbox{
     box-shadow:10rpx 10rpx 5rpx #BEBABA;
     border-radius: 20rpx;
+    font-family: Microsoft YaHei;
 }
 
 .list_item{
@@ -44,7 +45,6 @@
    float: left;
    width: 70%;
    font-size: 28rpx;
-   font-weight: bold;
 }
 
 .textcontainer{
