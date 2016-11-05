@@ -2,7 +2,7 @@
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <view wx:for="{{topstories}}">
       <swiper-item>
-      <navigator url="../detail/detail?id={{item.id}}&pageurl={{item.url}}">
+      <navigator url="../detail/detail?id={{item.id}}">
         <image src="{{item.firstImg}}" class="slide-image" />
       </navigator>
       </swiper-item>
@@ -12,7 +12,7 @@
 
 <view class="storieslist">
   <view wx:for="{{storieslist}}" class="imgbox">
-    <navigator url="../detail/detail?id={{item.id}}&pageurl={{item.url}}">
+    <navigator url="../detail/detail?id={{item.id}}">
         <view class="list_item clearfix">
           <view class="listimg">
              <image src="{{item.firstImg}}"></image>
