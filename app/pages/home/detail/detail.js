@@ -1,19 +1,23 @@
 Page({
   data: {
-    article:""
+    url:""
   },
   onLoad: function (options) {
     var that = this;
-    wx.request({
-      url: 'http://v.juhe.cn/weixin/redirect',
-      data: {
-        wid:options.id
-      },
-      method: 'GET',
-      success: function(res){
-        console.info(res.data);
-      }
-    })
+    this.setData({
+      url:"http://v.juhe.cn/weixin/redirect?wid="+options.id
+    });
+    console.info(this.data.url);
+    // wx.request({
+    //   url: 'http://v.juhe.cn/weixin/redirect',
+    //   data: {
+    //     wid:options.id
+    //   },
+    //   method: 'GET',
+    //   success: function(res){
+    //     console.info(res.data);
+    //   }
+    // })
 
   },
   onReady: function () {

@@ -1,3 +1,14 @@
-<view>
-    <text>资讯</text>
+<view class="scroll-view">
+  <view class="scroll-tab">
+    <view class="item" >头条</view>
+    <view class="item">社会</view>
+    <view class="item">国内</view>
+    <view class="item">国际</view>
+    <view class="item">娱乐</view>
+    <view class="item">体育</view>
+    <view class="item">军事</view>
+    <view class="item">科技</view>
+    <view class="item">财经</view>
+    <view class="item">时尚</view>
+  </view>
 </view>

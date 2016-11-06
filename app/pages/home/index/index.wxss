@@ -19,7 +19,7 @@
     margin-top:20rpx;
     position: relative;
     border: 4rpx solid #1296db;
-     border-radius: 20rpx;
+    border-radius: 20rpx;
 }
 .list_item text{
     font-size: 30rpx
