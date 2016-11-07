@@ -18,7 +18,6 @@
 .list_item{
     margin-top:20rpx;
     position: relative;
-    border: 4rpx solid #1296db;
     border-radius: 20rpx;
 }
 .list_item text{
@@ -62,7 +61,7 @@
 .textsource{
     display: inline-block;
     font-size: 22rpx;
-    border: 4rpx solid red;
+    border: 2rpx solid red;
     border-radius: 10rpx;
     padding: 5rpx;
     color: red;

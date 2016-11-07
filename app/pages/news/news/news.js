@@ -1,41 +1,66 @@
 Page({
-  data:{
-    
+  data: {
+    topTab: [{ tab: "头条", newstype: "top", tabclass: "itemChecked" },
+    { tab: "社会", newstype: "shehui", tabclass: "item" },
+    { tab: "国内", newstype: "guonei", tabclass: "item" },
+    { tab: "国际", newstype: "guoji", tabclass: "item" },
+    { tab: "娱乐", newstype: "yule", tabclass: "item" },
+    { tab: "体育", newstype: "tiyu", tabclass: "item" },
+    { tab: "军事", newstype: "junshi", tabclass: "item" },
+    { tab: "科技", newstype: "keji", tabclass: "item" },
+    { tab: "财经", newstype: "caijing", tabclass: "item" },
+    { tab: "时尚", newstype: "shishang", tabclass: "item" },
+    ],
+    currentType: "top",
+    newsList: []
   },
-  onLoad:function(options){
-    // 生命周期函数--监听页面加载
-    
+  onLoad: function (options) {
+    this.getNewsByType();
   },
-  onReady:function(){
-    // 生命周期函数--监听页面初次渲染完成
-    
-  },
-  onShow:function(){
-    // 生命周期函数--监听页面显示
-    
-  },
-  onHide:function(){
-    // 生命周期函数--监听页面隐藏
-    
-  },
-  onUnload:function(){
-    // 生命周期函数--监听页面卸载
-    
-  },
-  onPullDownRefresh: function() {
-    // 页面相关事件处理函数--监听用户下拉动作
-    
-  },
-  onReachBottom: function() {
-    // 页面上拉触底事件的处理函数
-    
-  },
-  onShareAppMessage: function() {
-    // 用户点击右上角分享
-    return {
-      title: 'title', // 分享标题
-      desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
+  getNewsByType: function (event) {
+    var that = this;
+
+    if (event) {
+      if (event.target.dataset.type != that.data.currentType) {
+        var param = {};
+        var currentIndex = "topTab[" + that.returnIndex(that.data.currentType) + "].tabclass";
+        var clickIndex = "topTab[" + that.returnIndex(event.target.dataset.type) + "].tabclass";
+
+        param[currentIndex] = "item";
+        param[clickIndex] = "itemChecked";
+        param["currentType"] = event.target.dataset.type;
+
+        that.setData(param);
+      }
     }
+
+    wx.request({
+      url: 'http://v.juhe.cn/toutiao/index',
+      data: {
+        type: that.data.currentType,
+        key: "ab31a2487c139a1cdbd11c07eb468685"
+      },
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          newsList: res.data.result.data
+        });
+      }
+    })
+
+  },
+  returnIndex: function (data) {
+    var that = this;
+    var index;
+    console.info(data);
+    for (var i = 0; i < that.data.topTab.length; i++) {
+      if (that.data.topTab[i].newstype == data) {
+        index = i;
+      }
+    };
+    return parseInt(index);
   }
 })

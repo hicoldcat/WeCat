@@ -1,21 +1,33 @@
-
-.scroll-tab{
-    width: 100%;
-    overflow: hidden;
-    /*overflow-x: scroll;*/
-    white-space: nowrap;
-    background-color: #F4F5F6;
+.scroll-tab {
+  width: 100%;
+  overflow: hidden;
+  /*overflow-x: scroll;*/
+  white-space: nowrap;
+  background-color: #f4f5f6;
 }
 
-.item{
-   height: 40rpx;
-   width: 55rpx;
-   margin: 10rpx;
-   line-height: 28rpx;
-   font-size: 28rpx;
-   font-family: Microsoft YaHei;
-   display: inline-block;
-   white-space: nowrap;
-   color: black;
-   font-weight: bold;
+.item {
+  height: 40rpx;
+  width: 55rpx;
+  margin: 10rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  display: inline-block;
+  white-space: nowrap;
+  color: black;
+  font-weight: bold;
+}
+
+.itemChecked {
+  height: 40rpx;
+  width: 55rpx;
+  margin: 10rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #1296db;
 }

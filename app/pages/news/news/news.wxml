@@ -1,14 +1,24 @@
-<view class="scroll-view">
-  <view class="scroll-tab">
-    <view class="item" >头条</view>
-    <view class="item">社会</view>
-    <view class="item">国内</view>
-    <view class="item">国际</view>
-    <view class="item">娱乐</view>
-    <view class="item">体育</view>
-    <view class="item">军事</view>
-    <view class="item">科技</view>
-    <view class="item">财经</view>
-    <view class="item">时尚</view>
+<view class="scroll-tab">
+  <view class="{{item.tabclass}}" wx:for="{{topTab}}" data-type="{{item.newstype}}" bindtap="getNewsByType">
+    {{item.tab}}
+  </view>
+</view>
+<view>
+  <view wx:for="{{newsList}}">
+    <navigator>
+      <view class="newstitle">{{item.title}}</view>
+      <view class="newspiclist">
+        <view class="newspic">
+          <image src="{{item.thumbnail_pic_s}}"></image>
+        </view>
+        <view class="newspic">
+          <image src="{{item.thumbnail_pic_s02}}"></image>
+        </view>
+        <view class="newspic">
+          <image src="{{item.thumbnail_pic_s03}}"></image>
+        </view>
+      </view>
+      <view class="newsfoot"></view>
+    </navigator>
   </view>
 </view>
