@@ -19,7 +19,11 @@ Page({
   },
   getNewsByType: function (event) {
     var that = this;
-
+    wx.showToast({
+      title: '正在加载中',
+      icon: 'loading',
+      duration: 2000
+    })
     if (event) {
       if (event.target.dataset.type != that.data.currentType) {
         var param = {};
@@ -48,6 +52,7 @@ Page({
         that.setData({
           newsList: res.data.result.data
         });
+         wx.hideToast();
       }
     })
 

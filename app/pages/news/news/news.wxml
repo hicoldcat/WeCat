@@ -4,21 +4,20 @@
   </view>
 </view>
 <view>
-  <view wx:for="{{newsList}}">
+
+<view class="newsList">
+  <view wx:for="{{newsList}}" class="imgbox">
     <navigator>
-      <view class="newstitle">{{item.title}}</view>
-      <view class="newspiclist">
-        <view class="newspic">
-          <image src="{{item.thumbnail_pic_s}}"></image>
-        </view>
-        <view class="newspic">
-          <image src="{{item.thumbnail_pic_s02}}"></image>
-        </view>
-        <view class="newspic">
-          <image src="{{item.thumbnail_pic_s03}}"></image>
-        </view>
+        <view class="list_item clearfix">
+          <view class="newspic">
+             <image src="{{item.thumbnail_pic_s}}"></image>
+          </view>
+          <view class="newstitle">{{item.title}}</view>
+          <view class="newsfoot">
+            <view class="textfrom">来源：</view>
+            <view class="textsource">{{item.author_name}}</view>
+          </view>
       </view>
-      <view class="newsfoot"></view>
     </navigator>
   </view>
 </view>
