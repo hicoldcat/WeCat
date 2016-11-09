@@ -7,7 +7,7 @@
 
 <view class="newsList">
   <view wx:for="{{newsList}}" class="imgbox">
-    <navigator>
+    <navigator url="../detail/detail?id={{item.uniquekey}}">
         <view class="list_item clearfix">
           <view class="newspic">
              <image src="{{item.thumbnail_pic_s}}"></image>

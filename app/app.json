@@ -5,7 +5,8 @@
     "pages/news/news/news",
     "pages/work/work/work",
     
-    "pages/home/detail/detail"
+    "pages/home/detail/detail",
+    "pages/news/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
