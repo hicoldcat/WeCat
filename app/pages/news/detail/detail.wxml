@@ -1,4 +1,2 @@
-<view>
-  <view>文章URL为：</view>
-  <view style="font-size:20rpx;">{{url}}</view>
-</view>
+<import src="../../../utils/html2wxml/html2wxml.wxml" />
+<template is="html2Wxml" data="{{innerHTML}}"></template>

@@ -12,6 +12,11 @@ Page({
 
   onLoad: function () {
     var that = this;
+     wx.showToast({
+      title: '正在加载中',
+      icon: 'loading',
+      duration: 2000
+    })
     wx.request({
       url: 'http://v.juhe.cn/weixin/query',
       data: {
@@ -25,7 +30,7 @@ Page({
       },
       method: "GET",
       success(res) {
-        console.info(res);
+        wx.hideToast();
         let resArr = res.data.result.list;
         if (resArr.length > 5) {
           that.setData({
