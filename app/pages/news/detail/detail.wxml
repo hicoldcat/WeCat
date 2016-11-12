@@ -1,2 +1,4 @@
-<import src="../../../utils/html2wxml/html2wxml.wxml" />
-<template is="html2Wxml" data="{{innerHTML}}"></template>
+<!--<import src="../../../utils/html2wxml/html2wxml.wxml" />
+<template is="html2Wxml" data="{{innerHTML}}" />-->
+
+<view>{{innerHTML}}</view>

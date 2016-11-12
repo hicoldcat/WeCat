@@ -3,7 +3,6 @@
     {{item.tab}}
   </view>
 </view>
-<view>
 
 <view class="newsList">
   <view wx:for="{{newsList}}" class="imgbox">
