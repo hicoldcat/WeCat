@@ -1,21 +1,31 @@
+var App = getApp();
 Page({
-  data:{ 
-    
+  data: {
+    userlogo: '',
+    userNameEn:"",
+    userNameCh:"冷猫先森",
+    contentEn: "Do something funny !",
+    contentCh:"做有趣的事！",
+    webAdd:'my web : www.hicoldcat.com \n',
+    email:'my email : hicoldcat@foxmail.com \n'
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-   console.log(this.banner);
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
+    var that = this;
+
+    wx.login({
+      success: function () {
+        wx.getUserInfo({
+          success: function (res) {
+            console.info(res.userInfo);
+            that.setData({
+              userlogo: res.userInfo.avatarUrl,
+              userNameEn:res.userInfo.nickName
+            });
+          }
+        })
+      }
+    });
+
   }
 })

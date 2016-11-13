@@ -1,3 +1,21 @@
-<view >
-    <text>猫窝</text>
+<view class="box">
+    <view class="logoBox">
+        <image src="{{userlogo}}" class="userlogo"></image>
+    </view>
+     <view class="userNameEn">
+        <text>{{userNameEn}}</text>
+    </view>
+     <view class="userNameCh">
+        <text>{{userNameCh}}</text>
+    </view>
+    <view class="contentEn">
+        <text>{{contentEn}}</text>
+    </view>
+    <view class="contentCh">
+        <text>{{contentCh}}</text>
+    </view>
+    <view class="userInfo">
+        <text>{{webAdd}}</text>
+        <text>{{email}}</text>
+    </view>
 </view>

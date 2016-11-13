@@ -11,7 +11,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1296db",
-    "navigationBarTitleText": "HiColdCat",
+    "navigationBarTitleText": "冷猫先森",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -40,7 +40,7 @@
       },
       {
         "pagePath": "pages/work/work/work",
-        "text": "猫窝",
+        "text": "喵窝",
         "iconPath":"images/work.png",
         "selectedIconPath":"images/work_hl.png"
       }
